@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Dashboard</h1>
+    </header>
+    <main>
+        <form id="inputForm">
+            <input type="text" placeholder="Enter your name" required />
+            <input type="range" min="0" max="100" value="50" id="slider" />
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="tabs">
+            <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+            <div id="London" class="tabcontent">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div id="Paris" class="tabcontent">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+        </div>
+        
+        <button id="loadData">Load Data</button>
+        <div id="dataContainer"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
