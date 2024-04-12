@@ -2,11 +2,11 @@
 
 ## 1. Projecst folders and files structure
 
-The project files have been extracted and the structure includes two main directories: **public** and **server**
+The project files have been extracted and the structure includes two main directories: **client** and **server**
 
-This likely indicates that **public** contains your **frontend** assets (like HTML, CSS, JavaScript files) and server contains your backend code.
+This likely indicates that **client** contains your **frontend** assets (like HTML, CSS, JavaScript files) and **server** contains your **backend** code.
 
-## 2. Frontend (public directory)
+## 2. Frontend (client directory)
 
 ![image](https://github.com/luiscoco/HTML-CSS-JavaScript-sample3/assets/32194879/af72ac1b-b419-4621-9b79-c99d3641d6a2)
 
