@@ -6,7 +6,7 @@ The project files have been extracted and the structure includes two main direct
 
 This likely indicates that **public** contains your **frontend** assets (like HTML, CSS, JavaScript files) and server contains your backend code.
 
-## 2. Frontend (public directory)**
+## 2. Frontend (public directory)
 
 ![image](https://github.com/luiscoco/HTML-CSS-JavaScript-sample3/assets/32194879/af72ac1b-b419-4621-9b79-c99d3641d6a2)
 
@@ -16,7 +16,7 @@ This likely indicates that **public** contains your **frontend** assets (like HT
 
 **script.js**: The JavaScript file, presumably containing the logic for interacting with the backend.
 
-## 3. Backend (server directory)**
+## 3. Backend (server directory)
 
 ![image](https://github.com/luiscoco/HTML-CSS-JavaScript-sample3/assets/32194879/7987fad8-6dcd-4930-b807-12ec80a7f9da)
 
@@ -26,7 +26,123 @@ This likely indicates that **public** contains your **frontend** assets (like HT
 
 ## 4. Frontend source code
 
+**index.html**
 
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Dashboard</h1>
+    </header>
+    <main>
+        <form id="inputForm">
+            <input type="text" placeholder="Enter your name" required />
+            <input type="range" min="0" max="100" value="50" id="slider" />
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="tabs">
+            <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+            <div id="London" class="tabcontent">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div id="Paris" class="tabcontent">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+        </div>
+        
+        <button id="loadData">Load Data</button>
+        <div id="dataContainer"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```script.js
+
+document.getElementById('inputForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Form submitted!');
+});
+
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById('loadData').addEventListener('click', function() {
+    const container = document.getElementById('dataContainer');
+    container.innerHTML = '<p>Loading data...</p>';
+
+    // Fetching data from the backend
+    fetch('http://localhost:3000/api/data')
+        .then(response => response.json())
+        .then(data => {
+            container.innerHTML = `<p>${data.info}</p>`;
+        })
+        .catch(error => {
+            container.innerHTML = `<p>Error loading data: ${error}</p>`;
+        });
+});
+```
+
+**styles.css**
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px 0;
+    border-top: none;
+}
+
+#dataContainer {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+```
 
 ## 5. Backend source code
 
