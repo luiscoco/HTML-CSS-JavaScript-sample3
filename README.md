@@ -207,8 +207,10 @@ We can verify the server endpoint: http://localhost:3000/api/data
 
 ![image](https://github.com/luiscoco/HTML-CSS-JavaScript-sample3/assets/32194879/378c1be3-376e-4de3-b0bd-934f8964895f)
 
-
-
 ## 7. How to run the client application
 
+To run the client application we right click on the index.hmtl file and we select the **Open with Live Server** menu option
 
+![image](https://github.com/luiscoco/HTML-CSS-JavaScript-sample3/assets/32194879/224bb092-a21c-4947-a849-0debb58eed0c)
+
+![image](https://github.com/luiscoco/HTML-CSS-JavaScript-sample3/assets/32194879/cc9836d5-3243-4dae-ad9b-fa7c3e4b2dec)
