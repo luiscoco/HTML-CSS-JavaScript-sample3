@@ -29,7 +29,6 @@ This likely indicates that **public** contains your **frontend** assets (like HT
 **index.html**
 
 ```html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,8 +69,9 @@ This likely indicates that **public** contains your **frontend** assets (like HT
 </html>
 ```
 
-```script.js
+**script.js**
 
+```
 document.getElementById('inputForm').addEventListener('submit', function(event) {
     event.preventDefault();
     alert('Form submitted!');
