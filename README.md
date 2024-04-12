@@ -71,7 +71,7 @@ This likely indicates that **public** contains your **frontend** assets (like HT
 
 **script.js**
 
-```
+```javascript
 document.getElementById('inputForm').addEventListener('submit', function(event) {
     event.preventDefault();
     alert('Form submitted!');
