@@ -2,6 +2,14 @@
 
 See the source code for this sample in this github repo: https://github.com/luiscoco/HTML-CSS-JavaScript-sample3
 
+See also this web pages: 
+
+**HTML**: https://developer.mozilla.org/es/docs/Web/HTML
+
+**CSS**: https://developer.mozilla.org/en-US/docs/Learn/CSS
+
+**JavaScript**: https://developer.mozilla.org/en-US/docs/Learn/JavaScript
+
 ## 1. Projecst folders and files structure
 
 The project files have been extracted and the structure includes two main directories: **client** and **server**
