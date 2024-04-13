@@ -10,6 +10,8 @@ See also this web pages:
 
 **JavaScript**: https://developer.mozilla.org/en-US/docs/Learn/JavaScript
 
+Playground: https://developer.mozilla.org/en-US/play
+
 ## 1. Projecst folders and files structure
 
 The project files have been extracted and the structure includes two main directories: **client** and **server**
